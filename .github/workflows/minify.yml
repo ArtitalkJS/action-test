@@ -15,5 +15,5 @@ jobs:
     - name: Setup
       run: yarn install
 
-    - name: minify
+    - name: Minify
       run: yarn gulp
