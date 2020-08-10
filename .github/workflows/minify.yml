@@ -22,7 +22,8 @@ jobs:
       run: |
         git config --global user.email artitalk-bot@email.com
         git config --global user.name artitalk-bot
-        git add .
+        git add dist/js/artitalk.js -f
+        git add dist/js/artitalk.min.js -f
         git commit -m "Successful minify" -a
 
     - name: Push
