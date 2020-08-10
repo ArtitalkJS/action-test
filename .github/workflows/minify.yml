@@ -17,3 +17,15 @@ jobs:
 
     - name: Minify
       run: yarn gulp
+
+    - name: Commit
+      run: |
+        git config --global user.email artitalk-bot@email.com
+        git config --global user.name artitalk-bot
+        git add .
+        git commit -m "Successful minify" -a
+
+    - name: Push
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.TOKEN }}
